@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SM 엔터테인먼트</title>
+  </head>
+
+  <body>
+    <h1>SM 엔터테인먼트</h1>
+    <h2>Boy Group</h2>
+    <h3>NCT</h3>
+    <ul id="nctList"></ul>
+
+    <script>
+      const nameList = ["NCT 127", "NCT DREAM", "NCT WISH"];
+      const imgList = ["nct127.jpg", "nctdream.jpg", "nctwish.jpg"];
+      const nctList = document.getElementById("nctList");
+
+      for (let i = 0; i < nameList.length; i++) {
+        const listItem = document.createElement("li");
+        const link = document.createElement("a");
+        const image = document.createElement("img");
+
+        link.href = "https://ko.wikipedia.org/wiki/" + nameList[i];
+        link.textContent = nameList[i];
+
+        image.src = "images/" + imgList[i]; // Assuming images are stored in 'images' folder
+        image.width = "30%";
+
+        listItem.appendChild(link);
+        listItem.appendChild(image);
+        nctList.appendChild(listItem);
+      }
+    </script>
+  </body>
+</html>
+
+
